@@ -31,7 +31,7 @@ CREATE TABLE xfn_table(
     tid INT PRIMARY KEY AUTO_INCREMENT,
     tname VARCHAR(64),
     type VARCHAR(16),
-    status INT
+    status INT  
 );
 INSERT INTO xfn_table VALUE(NULL,'云浮','6-8人桌',1);
 INSERT INTO xfn_table VALUE(NULL,'福满堂','6人桌',2);
