@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS xiaofeiniu;
 CREATE DATABASE xiaofeiniu CHARSET=UTF8;
 USE xiaofeiniu;
 
-/*管理员*/
+/*1.管理员*/
 CREATE TABLE xfn_admin(
   aid INT PRIMARY KEY AUTO_INCREMENT,
   aname VARCHAR(32) UNIQUE,
@@ -13,7 +13,7 @@ INSERT INTO xfn_admin VALUES
 (NULL, 'admin', PASSWORD('123456')),
 (NULL, 'boss', PASSWORD('999999'));
 
-/*全局设置*/
+/*2.全局设置*/
 CREATE TABLE xfn_settings(
   sid INT PRIMARY KEY AUTO_INCREMENT,
   appName VARCHAR(32),
@@ -26,7 +26,7 @@ CREATE TABLE xfn_settings(
 INSERT INTO xfn_settings VALUES
 (NULL, '小肥牛', 'http://127.0.0.1:8090', 'http://127.0.0.1:8091', 'http://127.0.0.1:8092', '京ICP备12003709号-3', 'Copyright © 北京达内金桥科技有限公司版权所有');
 
-/*桌台表*/
+/*3.桌台表*/
 CREATE TABLE xfn_table(
   tid INT PRIMARY KEY AUTO_INCREMENT,
   tname VARCHAR(32),
@@ -48,7 +48,7 @@ INSERT INTO xfn_table VALUES
 (13, '高升阁', '4人桌', 3),
 (15, '乐逍遥', '2人桌',3);
 
-/*桌台预定信息*/
+/*4.桌台预定信息*/
 CREATE TABLE xfn_reservation(
   rid INT PRIMARY KEY AUTO_INCREMENT,
   contactName VARCHAR(32),

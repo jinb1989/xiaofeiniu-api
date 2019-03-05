@@ -18,8 +18,6 @@ router.get('/', (req, res) => {
         res.send(result);
     })
 })
-
-
 /**
  * API: DELETE/admin/category/:cid
  * 含义：根据表示菜品编号的路由参数，删除该菜品
@@ -45,7 +43,6 @@ router.delete('/:cid', (req, res) => {
         })
     })
 })
-
 /**
  * API: POST/admin/category
  * 请求主体参数：{cname:xxx'}
@@ -64,7 +61,6 @@ router.delete('/:cid', (req, res) => {
               res.send({code:200,msg:'1 category added',cid:result.insertId});
         })
     })
-
 /**
  * API: PUT/admin/category
  * 请求主体参数：{cid:xxx,cname:xxx'}
